@@ -1,0 +1,130 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+}
+
+textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: 1px solid black;
+  padding: 10px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+}
+
+.description {
+  white-space: pre-wrap;
+}
+
+.time-block {
+  text-align: center;
+  border-radius: 15px;
+}
+
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;
+}
+
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
+
+.past {
+  background-color: #d3d3d3;
+  color: white;
+}
+
+.present {
+  background-color: #ff6961;
+  color: white;
+}
+
+.future {
+  background-color: #77dd77;
+  color: white;
+}
+
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06aed5;
+  color: white;
+}
+
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+/*---------------------*/
+
+#flash{
+  opacity: 0;
+}
+
+.redText{
+  color:red;
+}
+
+.schedules{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 50px;
+}
+
+.businessHours {
+  width: 50px;
+  font-style: oblique;
+  text-align: center;
+  padding-top: 15px;
+  margin-left: 5px;
+  display: table-cell;
+  vertical-align: middle;
+  border-right: 1px solid black;
+  border-top: 1px dashed black;
+  border-bottom: 1px dashed black;
+}
+
+.scheduleItem{
+  background-color: lightgray;
+  border: none;
+  border-bottom: 1px solid white;
+  width:75vw;
+}
+
+
+
+.btn{
+  color:white;
+  background-color: #428bca;
+  border-top-left-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom: 1px solid white;
+  width:50px;
+}
+
+
