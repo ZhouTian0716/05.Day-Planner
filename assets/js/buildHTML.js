@@ -11,6 +11,7 @@ var todoInputArray = [];
 var saveButtonArray = [];
 var saveIconArray = [];
 var j;
+var storedTodos = JSON.parse(localStorage.getItem("todoList"));
 //-----------------------------------------------------------------------------------
 for (var i = 0; i<24; i++){
     todoArray.push($('<div class="todo">'));
@@ -26,27 +27,22 @@ function renderPage(){
         todoArray[i].append(todoInputArray[i]);
         todoArray[i].append(saveButtonArray[i]);
         saveButtonArray[i].text('💾');
+        //Assign data-index to each button for identifying particular user input in the next script file
         saveButtonArray[i].attr('data-index', i);
         businessHoursArray[i].text(moment().hour(i+9).format("hA"));
         //Find out the current hour on planner, change input background to red,
         //input background default in lightgray.
-        if (currentHour===moment().hour(i+9).format("hA")) {todoInputArray[i].css('background-color', 'red'); j=i;}
+        if (currentHour===moment().hour(i+9).format("hA"))
+        {todoInputArray[i].css('background-color', 'red'); j=i;}
     }
-    //any hour after change to green background.
+    //hours after current change to green background.
     for (j=j+1; j<24; j++){
         todoInputArray[j].css('background-color', 'green')
     }
 }
+
 renderPage();
 
 
-//Fill in schedule if (localStorage) storedTodos has any value
-function init(){
-    var storedTodos = JSON.parse(localStorage.getItem("todoList"));
-    if (storedTodos!==null){
-        for(var i=0; i<24; i++){
-            $(todoInputArray[i]).attr('value', storedTodos[i]);
-        }
-    }
-}
-init();
+
+
