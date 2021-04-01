@@ -20,10 +20,11 @@ function clickSave(event){
     //importain, check localStorage if exist!
     if (storedTodos!==null){
         for (var i=0; i<24; i++){
-            todoList[i] = storedTodos[i];
+            todoList[i] = $(todoInput[i]).val();
         }
     }
-    todoList[index] = btnClicked.siblings().eq(1).val();
+    //Assign user input
+    todoList[index]= btnClicked.siblings().eq(1).val();
     localStorage.setItem("todoList", JSON.stringify(todoList));
     messageFlash.css('opacity', '1');
     //Set timer to flash message

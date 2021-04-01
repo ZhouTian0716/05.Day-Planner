@@ -11,7 +11,6 @@ var todoInputArray = [];
 var saveButtonArray = [];
 var saveIconArray = [];
 var j;
-var storedTodos = JSON.parse(localStorage.getItem("todoList"));
 //-----------------------------------------------------------------------------------
 for (var i = 0; i<24; i++){
     todoArray.push($('<div class="todo">'));
